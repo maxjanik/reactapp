@@ -11,43 +11,55 @@ import {
 import Home from "./Pages/home";
 import Stuff from "./Pages/stuff";
 import Contact from "./Pages/contact";
+import Finance from "./Pages/finance";
+import Microeconomics from "./Pages/microeconomics";
+import Career from "./Pages/career";
+import Jobs from "./Pages/jobs";
 
-
-import { FaBook, FaHome, FaAddressBook } from 'react-icons/fa';
+import { FaBook, FaHome, FaAddressBook, FaUsers, FaLandmark, FaBuilding, FaMoneyBillAlt, FaCalculator, FaBriefcase, FaChartLine, FaLightbulb} from 'react-icons/fa';
 // https://github.com/react-icons/react-icons
 
 class App extends Component {
   render() {
     return (
-      <div class="container-fluid">
+      <div class="container-fluid" style={styles.bg}>
         <Row>
         <HashRouter>
+
           <Col sm={3} style={styles.sidebar}>
             <h3 style={styles.logo}>React Dashboard</h3>
             <div className="header">
-               <h3 class="navheader">Header</h3>
+               <h3 class="navheader">Home</h3>
                <h3 class="navrow"><FaHome style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/">Home</NavLink></h3>
-               <h3 class="navrow"><FaBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/stuff">Stuff</NavLink></h3>
-               <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Contact</NavLink></h3>
-               <h3 class="navheader">Header</h3>
-               <h3 class="navrow"><FaHome style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/">Home</NavLink></h3>
-               <h3 class="navrow"><FaBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/stuff">Microeconomics</NavLink></h3>
-               <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Commerical Real Estate</NavLink></h3>
-               <h3 class="navrow"><FaHome style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/">Home</NavLink></h3>
-               <h3 class="navrow"><FaBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/stuff">Accounting</NavLink></h3>
-               <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Global Finance</NavLink></h3>
-               <h3 class="navheader">Careers</h3>
-               <h3 class="navrow"><FaHome style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/">Home</NavLink></h3>
-               <h3 class="navrow"><FaBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/stuff">Stuff</NavLink></h3>
-               <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Contact</NavLink></h3>
-
+               <h3 class="navrow"><FaBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/stuff">About Us</NavLink></h3>
+               <h3 class="navheader">Career</h3>
+               <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/career">Business Careers</NavLink></h3>
+               <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/jobs">Job Board</NavLink></h3>
+               <h3 class="navheader">Learn</h3>
+               <h3 class="navrow"><FaMoneyBillAlt style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/finance">Finance</NavLink></h3>
+               <h3 class="navrow"><FaCalculator style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/stuff">Accounting</NavLink></h3>
+               <h3 class="navrow"><FaLandmark style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/microeconomics">Microeconomics</NavLink></h3>
+               <h3 class="navrow"><FaLandmark style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/microeconomics">Macroeconomics</NavLink></h3>
+               <h3 class="navrow"><FaBuilding style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Real Estate</NavLink></h3>
+               <h3 class="navrow"><FaBuilding style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Marketing</NavLink></h3>
+               <h3 class="navrow"><FaLightbulb style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Entrepreneurship</NavLink></h3>
+               <h3 class="navrow"><FaBuilding style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Venture Capital</NavLink></h3>
+               <h3 class="navrow"><FaChartLine style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Data Analysis</NavLink></h3>
+               <h3 class="navheader">Engage</h3>
+               <h3 class="navrow"><FaHome style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/">Group projects</NavLink></h3>
+               <h3 class="navrow"><FaUsers style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/jobs">Networking</NavLink></h3>
+               <h3 class="navrow"><FaBriefcase style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/contact">Join our team</NavLink></h3>
             </div></Col>
 
           <Col sm={9}>
-          <div className="content">
+          <div className="content" style={styles.content}>
              <Route exact path="/" component={Home}/>
              <Route path="/stuff" component={Stuff}/>
              <Route path="/contact" component={Contact}/>
+             <Route path="/finance" component={Finance}/>
+             <Route path="/microeconomics" component={Microeconomics}/>
+             <Route path="/career" component={Career}/>
+             <Route path="/jobs" component={Jobs}/>
           </div></Col>
 
         </HashRouter>
@@ -83,5 +95,13 @@ const styles: StyleSheet = {
     marginRight: '25px',
 
   },
+
+  content: {
+    margin: '25px',
+  },
+
+  bg: {
+    backgroundColor: "#f2f2f2",
+  }
 
 }

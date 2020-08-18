@@ -40,36 +40,35 @@
   }
 }
 
-
 .navtext{
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: lighter;
-  color: #ebebeb;
+  color: #d6d6d6;
   text-decoration: none;
 }
 
 .navrow{
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: lighter;
-  color: #ebebeb;
+  color: #d6d6d6;
   text-decoration: none;
 }
 
 .navtext a:visited{
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: lighter;
-  color: #ebebeb;
+  color: #d6d6d6;
   text-decoration: none;
 }
 
 .navrow a:visited{
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: lighter;
-  color: #ebebeb;
+  color: #d6d6d6;
   text-decoration: none;
 }
 
