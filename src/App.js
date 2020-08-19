@@ -15,6 +15,7 @@ import Finance from "./Pages/finance";
 import Microeconomics from "./Pages/microeconomics";
 import Career from "./Pages/career";
 import Jobs from "./Pages/jobs";
+import About from './Pages/about'
 
 import { FaBook, FaHome, FaAddressBook, FaUsers, FaLandmark, FaBuilding, FaMoneyBillAlt, FaCalculator, FaBriefcase, FaChartLine, FaLightbulb} from 'react-icons/fa';
 // https://github.com/react-icons/react-icons
@@ -31,7 +32,7 @@ class App extends Component {
             <div className="header">
                <h3 class="navheader">Home</h3>
                <h3 class="navrow"><FaHome style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/">Home</NavLink></h3>
-               <h3 class="navrow"><FaBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/stuff">About Us</NavLink></h3>
+               <h3 class="navrow"><FaBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/about">About Us</NavLink></h3>
                <h3 class="navheader">Career</h3>
                <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/career">Business Careers</NavLink></h3>
                <h3 class="navrow"><FaAddressBook style={styles.icon}/><NavLink activeStyle={{ color: '#ebebeb' }} class="navtext" to="/jobs">Job Board</NavLink></h3>
@@ -60,6 +61,7 @@ class App extends Component {
              <Route path="/microeconomics" component={Microeconomics}/>
              <Route path="/career" component={Career}/>
              <Route path="/jobs" component={Jobs}/>
+             <Route path="/about" component={About}/>
           </div></Col>
 
         </HashRouter>
